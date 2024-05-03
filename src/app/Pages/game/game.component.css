@@ -1,0 +1,17 @@
+.form-container {
+    width: 30%;
+    padding: 30px;
+    margin: auto; /* Esto centrará vertical y horizontalmente */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Esto centrará verticalmente */
+    position: fixed;
+    top: 50%; /* Posiciona el centro del contenedor al 50% de la parte superior */
+    left: 50%; /* Posiciona el centro del contenedor al 50% del lado izquierdo */
+    transform: translate(-50%, -50%);
+  }
+  
+  .flex {
+    margin-bottom: 10px;
+  }

@@ -1,0 +1,26 @@
+<div class="mat-elevation-z2 form-container" >
+<form [formGroup]="formGame">
+    <div class="flex">
+        <mat-form-field >
+            <mat-label>Titulo</mat-label>
+            <input matInput formControlName="name">
+          </mat-form-field>
+    </div>
+    <div class="flex">
+        <mat-form-field >
+            <mat-label>Descripcion</mat-label>
+            <input matInput formControlName="description">
+          </mat-form-field>
+    </div>
+    <div class="flex">
+        <mat-form-field >
+            <mat-label>URL de la imagen</mat-label>
+            <input matInput formControlName="imgUrl">
+          </mat-form-field>
+    </div>
+    <div class="flex">
+        <button mat-flat-button color="primary" (click)="save()">Guardar</button>
+        <button mat-flat-button color="warn" (click)="back()" style="margin-left: 8px;">Volver</button>
+    </div>
+</form>
+</div>

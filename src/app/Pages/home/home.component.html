@@ -1,0 +1,114 @@
+
+<app-nav-bar></app-nav-bar>
+
+<main>
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light" style="padding: 30px">
+          <font
+            style="vertical-align: inherit; font-size: 50px; font-weight: bold"
+            ><font style="vertical-align: inherit">GameVerse</font></font
+          >
+        </h1>
+        <p class="lead text-body-secondary">
+          <font style="vertical-align: inherit"
+            ><font style="vertical-align: inherit"
+              >GameVerse es tu destino definitivo para explorar un universo de
+              videojuegos. Descubre una amplia variedad de títulos, cada uno con
+              su descripción detallada y una imagen vibrante. ¡Pero eso no es
+              todo! También puedes contribuir a la comunidad de jugadores
+              agregando nuevos juegos, editando los existentes para mantener la
+              información actualizada o eliminando aquellos que ya no te
+              interesan. Únete a GameVerse y sumérgete en la experiencia
+              definitiva para los amantes de los videojuegos.</font
+            ></font
+          >
+        </p>
+        <p>
+            <button mat-flat-button color="primary" (click)="add()">
+                Agregar juego
+              </button>
+        </p>
+      </div>
+    </div>
+  </section>
+  <div class="album py-5 bg-dark">
+    <div class="container">
+      <mat-card style="width: 100%; margin: auto; background-color: #0f2537;" >
+        <h1 style="color: rgb(255, 255, 255); text-align: center; font-weight: bold;">Lista de juegos</h1>
+        <mat-card-content>
+          <div class="cards" style="padding-bottom: 10px;">
+            @for (item of listGames; track item) {
+            <div class="card">
+              <div class="img">
+                <img src="{{ item.imgUrl }}" alt="" style="border-radius: 10px; height: 300px; width: 290px;"/>
+              </div>
+              <div class="name" >
+                <p>{{ item.name }}</p>
+              </div>
+              <div class="description">
+                <p>{{ item.description }}</p>
+              </div>
+              <div style="display: flex; justify-content: space-around; padding-bottom: 5px;">
+                  <button mat-icon-button style="background-color: rgb(214, 175, 0);" (click)="edit(item)">
+                    <mat-icon>edit</mat-icon>
+                  </button>
+                  <button mat-icon-button style="background-color: red;" (click)="delete(item)">
+                    <mat-icon>delete</mat-icon>
+                  </button>
+              </div>
+            </div>
+
+            }
+          </div>
+
+         
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</main>
+<footer class="text-body-secondary py-5">
+  <div class="container">
+    <p class="float-end mb-1">
+      <a href="#"
+        ><font style="vertical-align: inherit"
+          ><font style="vertical-align: inherit">Volver arriba</font></font
+        ></a
+      >
+    </p>
+    <p class="mb-1">
+      <font style="vertical-align: inherit"
+        ><font style="vertical-align: inherit"
+          >El ejemplo del álbum es © Bootstrap, ¡pero descárgalo y personalízalo
+          tú mismo!</font
+        ></font
+      >
+    </p>
+    <p class="mb-0">
+      <font style="vertical-align: inherit"
+        ><font style="vertical-align: inherit"
+          >¿Nuevo en Bootstrap?
+        </font></font
+      ><a href="/"
+        ><font style="vertical-align: inherit"
+          ><font style="vertical-align: inherit"
+            >Visite la página de inicio</font
+          ></font
+        ></a
+      ><font style="vertical-align: inherit"
+        ><font style="vertical-align: inherit"> o lea </font></font
+      ><a href="/docs/5.3/getting-started/introduction/ "
+        ><font style="vertical-align: inherit"
+          ><font style="vertical-align: inherit"
+            >la guía de introducción</font
+          ></font
+        ></a
+      ><font style="vertical-align: inherit"
+        ><font style="vertical-align: inherit"> .</font></font
+      >
+    </p>
+  </div>
+  
+</footer>
